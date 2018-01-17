@@ -4,11 +4,13 @@ import com.cto3543.jc2co.model.Station
 import io.reactivex.Observable
 import retrofit2.http.GET
 
+/**
+ * @GET("stations")
+ * fun getInfoStations(@Path("station_number") station_number: Int, @Query("contract") contract_name: String): Observable<Station>
+ * */
 interface ApiServiceInterface {
     @GET("stations")
     fun getStations(): Observable<List<Station>>
-    //@GET("stations")
-    //fun getInfoStations(@Path("station_number") station_number: Int, @Query("contract") contract_name: String): Observable<Station>
 }
 
 class Constants {

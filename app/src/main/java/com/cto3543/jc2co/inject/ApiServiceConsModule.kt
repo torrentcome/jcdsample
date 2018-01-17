@@ -1,7 +1,7 @@
 package com.cto3543.jc2co.inject
 
 import android.content.Context
-import com.cto3543.jc2co.api.Constants.Companion.API_KEY
+import com.cto3543.jc2co.R
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -15,14 +15,14 @@ import java.io.File
 class ApiServiceConsModule {
     @AppScope
     @Provides
-    fun provideHttpClient(logger: HttpLoggingInterceptor, cache: Cache): OkHttpClient {
+    fun provideHttpClient(context: Context, logger: HttpLoggingInterceptor, cache: Cache): OkHttpClient {
         val builder = OkHttpClient().newBuilder()
         builder.addInterceptor(logger)
         builder.cache(cache)
         builder.addInterceptor { chain ->
             val original = chain.request()
             val originalHttpUrl = original.url()
-            val url = originalHttpUrl.newBuilder().addQueryParameter("apiKey", API_KEY).build()
+            val url = originalHttpUrl.newBuilder().addQueryParameter("apiKey", context.resources.getString(R.string.API_KEY)).build()
             val requestBuilder = original.newBuilder().url(url)
             val request = requestBuilder.build()
             chain.proceed(request)

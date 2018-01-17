@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 26
+    flavorDimensions "default"
     defaultConfig {
         applicationId "com.cto3543.jc2co"
         minSdkVersion 19
@@ -17,6 +18,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        Prod {
+            resValue "string", "API_KEY", "825ecd95a483d2e1f851462e43fc7c86e3e8c80f"
         }
     }
 }
