@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">jcd sample</string>
     <string name="title_activity_detail">DetailActivity</string>
-    <string name="number">Number</string>
-    <string name="name">Name</string>
     <string name="address">Address</string>
     <string name="bike_stands">Bike stands</string>
     <string name="available_bike_stands">Available bike stands</string>
