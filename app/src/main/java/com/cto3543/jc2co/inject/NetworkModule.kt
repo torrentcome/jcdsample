@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 
 @Module
-class ApiServiceConsModule {
+class NetworkModule {
     @AppScope
     @Provides
     fun provideHttpClient(context: Context, logger: HttpLoggingInterceptor, cache: Cache): OkHttpClient {

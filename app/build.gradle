@@ -24,6 +24,7 @@ android {
     productFlavors {
         Prod {
             resValue "string", "API_KEY", "825ecd95a483d2e1f851462e43fc7c86e3e8c80f"
+            resValue "string", "URL", "https://api.jcdecaux.com/vls/v1/"
         }
     }
 }
