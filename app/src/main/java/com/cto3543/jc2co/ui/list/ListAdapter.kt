@@ -22,5 +22,3 @@ class StationAdapter(private val list: List<Station>, private val listener: (Sta
         }
     }
 }
-
-
