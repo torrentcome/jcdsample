@@ -45,7 +45,7 @@ class SplashActivity : AppCompatActivity(), SplashContract.View {
             override fun onAnimationStart(p0: Animator?) = Unit.void()
             override fun onAnimationEnd(p0: Animator?) = goTo()
         })
-        textView.text = getString(R.string.jc2co)
+        textView.text = getString(R.string.app_name)
     }
 
     override fun showError(error: String) = Snackbar.make(list, error, Snackbar.LENGTH_LONG).show()

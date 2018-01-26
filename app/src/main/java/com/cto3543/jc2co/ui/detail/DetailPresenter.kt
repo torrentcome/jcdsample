@@ -13,6 +13,6 @@ class DetailPresenter : DetailContract.Presenter {
     }
 
     override fun detachView() {
-        this.view = view
+        this.view = null
     }
 }
