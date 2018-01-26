@@ -1,6 +1,7 @@
 package com.cto3543.jc2co.ui.detail
 
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import com.cto3543.jc2co.App
 import com.cto3543.jc2co.R
@@ -8,6 +9,7 @@ import com.cto3543.jc2co.model.Station
 import com.cto3543.jc2co.ui.Constant.Companion.KEY_STATION
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_detail_station.*
+import kotlinx.android.synthetic.main.activity_list.*
 import javax.inject.Inject
 
 class DetailActivity : AppCompatActivity(), DetailContract.View {
@@ -41,7 +43,7 @@ class DetailActivity : AppCompatActivity(), DetailContract.View {
     }
 
     override fun load(res: Station) {
-        toolbar.title = res.name
+        supportActionBar?.title = res.name
         number2.text = res.status
         address2.text = res.address
         bike_stands2.text = res.bike_stands.toString()
@@ -55,5 +57,6 @@ class DetailActivity : AppCompatActivity(), DetailContract.View {
     }
 
     override fun showError(error: String) {
+        Snackbar.make(list, error, Snackbar.LENGTH_LONG).show()
     }
 }

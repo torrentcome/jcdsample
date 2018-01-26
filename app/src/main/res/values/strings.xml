@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">jcd sample</string>
+    <string name="app_name">Jcd sample</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="address">Address</string>
     <string name="bike_stands">Bike stands</string>
     <string name="available_bike_stands">Available bike stands</string>
     <string name="available_bikes">Available bikes</string>
     <string name="status">Status</string>
+    <string name="jc2co">Jcd Sample</string>
 </resources>
